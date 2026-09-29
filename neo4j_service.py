@@ -51,7 +51,7 @@ def create_schema() -> None:
     ]
     for stmt in statements:
         query(stmt, write=True)
-st.image("1.jpg", width=120)
+
 
 def seed_demo_data() -> None:
     """Idempotent sample dataset: safe to run more than once."""
