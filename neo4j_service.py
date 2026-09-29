@@ -5,9 +5,7 @@ from typing import Any
 import streamlit as st
 from neo4j import GraphDatabase, RoutingControl
 
-# ตัวอย่างการใส่รูปผู้พัฒนาใน Streamlit sidebar หรือหน้าหลัก
-st.sidebar.image("path_to_developer_image.jpg", caption="ผู้พัฒนา: Developer Team")
-st.sidebar.title("ระบบแนะนำหนังสือด้วย Neo4j")
+
 def _config() -> tuple[str, str, str, str]:
     cfg = st.secrets["neo4j"]
     return (
@@ -53,7 +51,7 @@ def create_schema() -> None:
     ]
     for stmt in statements:
         query(stmt, write=True)
-
+st.image("1.jpg", width=120)
 
 def seed_demo_data() -> None:
     """Idempotent sample dataset: safe to run more than once."""
